@@ -21,8 +21,8 @@ app.listen(PORT, () => {
     console.log(`Connected at http://localhost:${PORT}`);
     db_1.default;
 });
-app.get('/', (_req, res) => {
-    return res.send('Express Typescript on Vercel');
+app.get('/ping', (_req, res) => {
+    return res.send('pong 🏓');
 });
 const userController = new user_controller_1.default();
 const userRepo = new user_repository_1.default();
