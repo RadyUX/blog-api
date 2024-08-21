@@ -2,10 +2,10 @@ import dbConfig from "./config/db.config";
 import mysql from "mysql2"
 
 const db = mysql.createConnection({
-    host: dbConfig.HOST,
-    user: dbConfig.USER,
-    password: dbConfig.PASSWORD,
-    database: dbConfig.DB
+    host: process.env.HOST,
+    user:  process.env.USER,
+    password:  process.env.PASSWORD,
+    database:  process.env.DB
   });
 
  db.connect(function(err) {

@@ -4,7 +4,6 @@ import db from "./db"
 import UserRepository from "./repository/user.repository";
 import User from "./models/user.model";
 import UserController from "./controllers/user.controller";
-import dotenv from 'dotenv/config'
 import authrouter from "./routes/auth.route";
 import userrouter from "./routes/user.route";
 import postrouter from "./routes/post.route";
@@ -12,7 +11,10 @@ import cors from "cors"
 import multer from "multer";
 import path from "path";
 import fs from "fs"
+import dotenv from "dotenv"
+
 import { Request, Response } from "express";
+dotenv.config()
 const app: Express = express()
 const PORT = process.env.PORT || 8080
 
