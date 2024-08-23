@@ -14,6 +14,7 @@ import fs from "fs"
 import dotenv from "dotenv"
 
 import { Request, Response } from "express";
+import pool from "./db";
 dotenv.config()
 const app: Express = express()
 const PORT = process.env.PORT || 8080
@@ -23,7 +24,7 @@ app.use(express.json());
   app.listen(PORT, () => {
     console.log(`Connected at http://localhost:${PORT}`);
     
-    db
+    pool
 });
 
 

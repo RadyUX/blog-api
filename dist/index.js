@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const db_1 = __importDefault(require("./db"));
 const user_repository_1 = __importDefault(require("./repository/user.repository"));
 const user_controller_1 = __importDefault(require("./controllers/user.controller"));
 const auth_route_1 = __importDefault(require("./routes/auth.route"));
@@ -15,6 +14,7 @@ const multer_1 = __importDefault(require("multer"));
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
 const dotenv_1 = __importDefault(require("dotenv"));
+const db_1 = __importDefault(require("./db"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 8080;
