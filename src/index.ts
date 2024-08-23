@@ -15,6 +15,7 @@ import dotenv from "dotenv"
 
 dotenv.config()
 import { Request, Response } from "express";
+import pool from "./db";
 const app: Express = express()
 const PORT = process.env.PORT || 8080
 
@@ -23,7 +24,7 @@ app.use(express.json());
   app.listen(PORT, () => {
     console.log(`Connected at http://localhost:${PORT}`);
     
-    db
+    pool
 });
 
 
